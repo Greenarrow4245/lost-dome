@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f7; 
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background-color: #ff7043;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Marquee Container Styling */
+.marquee-container {
+    background-color: #ffeee0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-bottom: 2px solid #ff7043;
+}
+
+/* Marquee Text Styling */
+.marquee {
+    display: inline-block;
+    padding: 10px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    animation: marquee 10s linear infinite;
+    color: #ff7043;
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Main Content Styling */
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Recipe Placeholder */
+.recipe-placeholder {
+    margin-top: 20px;
+    border: 1px solid #ff7043;
+    padding: 10px;
+    background-color: #fff;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #ff7043;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .marquee {
+        font-size: 1.2em;
+    }
+    main {
+        padding: 10px;
+    }
+}
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px 0; /* Increased margin to push the buttons down */
+}
+
+.button {
+    display: inline-block; /* Use inline-block to keep buttons side by side */
+    background: linear-gradient(45deg, #ff7043, #ffcc80); /* Closing parenthesis added */
+    color: white !important;
+    padding: 20px 40px; /* Maintain padding for button size */
+    margin: 0 15px; /* Space between buttons */
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.5em; /* Adjust font size for readability */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    border-collapse: collapse;
+    border: none;
+    outline: none;
+}
+
+.button:hover {
+    background: linear-gradient(45deg, #e65c3c, #ffb74d); /* Change on hover */
+    transform: translateY(-2px);
+}
